@@ -85,9 +85,6 @@ $(function () {
       processData: false,
       contentType: false,
       cache: false,
-      xhrFields: {
-        responseType: "text"
-      },
     })
     .done(function (data, status, xhr) {
         console.log("成功しました");
