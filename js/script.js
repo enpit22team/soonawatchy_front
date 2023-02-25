@@ -86,7 +86,7 @@ $(function () {
       contentType: false,
       cache: false,
       xhrFields: {
-        responseType: "blob"
+        responseType: "text"
       },
     })
     .done(function (data, status, xhr) {
