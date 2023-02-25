@@ -102,19 +102,19 @@ $(function () {
                 });
         
                 //Check the Browser type and download the File.
-                var isIE = false || !!document.documentMode;
-                if (isIE) {
-                    window.navigator.msSaveBlob(blob, fileName);
-                } else {
-                    var url = window.URL || window.webkitURL;
-                    link = url.createObjectURL(blob);
-                    var a = $("<a />");
-                    a.attr("download", fileName);
-                    a.attr("href", link);
-                    $("body").append(a);
-                    a[0].click();
-                    $("body").remove(a);
-                }
+                // var isIE = false || !!document.documentMode;
+                // if (isIE) {
+                //     window.navigator.msSaveBlob(blob, fileName);
+                // } else {
+                //     var url = window.URL || window.webkitURL;
+                //     link = url.createObjectURL(blob);
+                //     var a = $("<a />");
+                //     a.attr("download", fileName);
+                //     a.attr("href", link);
+                //     $("body").append(a);
+                //     a[0].click();
+                //     $("body").remove(a);
+                // }
                 mask.classList.add('hidden');
                 modal.classList.add('hidden');
                 progress.classList.add('hidden');
