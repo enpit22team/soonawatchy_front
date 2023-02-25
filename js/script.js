@@ -90,6 +90,7 @@ $(function () {
       },
     })
     .done(function (data, status, xhr) {
+        console.log("成功しました");
         clearInterval(interval_id);
         var start_value = progress.value;
         interval_id = setInterval(() => {
