@@ -201,6 +201,6 @@ progress::-ms-fill {
 }
 
 #output_json_text {
-    width: 400px;
+    width: 800px;
     padding: 15px;
 }
