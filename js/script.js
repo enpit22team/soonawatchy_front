@@ -120,7 +120,8 @@ $(function () {
                 // reader.addEventListener('loadend', (event) => {
                 //     $("#file_text").text(reader.result);
                 // });
-                let output = JSON.stringify(data, null , "\t");
+                let data_json = JSON.parse(data)
+                let output = JSON.stringify(data_json, null , "\t");
                 $("#file_text").text(output);
         
                 //Check the Browser type and download the File.
