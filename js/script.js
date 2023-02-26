@@ -85,6 +85,9 @@ $(function () {
       processData: false,
       contentType: false,
       cache: false,
+      headers: {  
+        'Content-Type': 'multipart/form-data'
+      },
     })
     .done(function (data, status, xhr) {
         console.log("成功しました");
