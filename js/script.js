@@ -113,13 +113,15 @@ $(function () {
         interval_id = setInterval(() => {
             progress.value += 0.1;
             if (progress.value == 100) {
-                var fileName = "result.txt"
-                var blob = new Blob([data], { type: "application/octetstream" });
-                const reader = new FileReader();
-                reader.readAsText(blob);
-                reader.addEventListener('loadend', (event) => {
-                    $("#file_text").text(reader.result);
-                });
+                // var fileName = "result.txt"
+                // var blob = new Blob([data], { type: "application/octetstream" });
+                // const reader = new FileReader();
+                // reader.readAsText(blob);
+                // reader.addEventListener('loadend', (event) => {
+                //     $("#file_text").text(reader.result);
+                // });
+                let output = JSON.stringify(data, null , "\t");
+                $("#file_text").text(output);
         
                 //Check the Browser type and download the File.
                 // var isIE = false || !!document.documentMode;
