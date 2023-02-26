@@ -5,15 +5,15 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta property='og:type' content='website'>
         <meta property='og:title' content="スナワッチー">
-        <!-- <meta property='og:url' content=''> -->
+        <meta property='og:url' content='https://soonawatchy.netlify.app/'>
         <meta property='og:description' content='その動画、すなわちコレ！動画の内容をすぐに把握できるツール'>
-        <meta property="og:image" content="img/ogp.png"> <!--これはSNSなどにシェアするときのサムネイル-->
+        <meta property="og:image" content="images/soonawatchy_logo.png">
         <meta name="description" content="その動画、すなわちコレ！動画の内容をすぐに把握できるツール" />
         <title>スナワッチー</title>
         <link href="./css/style.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="shortcut icon" href="images/soonawatchy_logo.png" />
-        <!-- <link rel="canonical" href="" /> -->
+        <link rel="canonical" href="https://soonawatchy.netlify.app/" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
@@ -24,22 +24,16 @@
         <main>
             <P>動画の内容をすぐに把握できます！<br>動画を撮ってアップロードしてみましょう。</P>
             <div>
-                <!-- <form action="https://8306-240b-10-84e1-f800-3d1b-3ae6-95de-f512.jp.ngrok.io/api/upload/" 
-                        enctype="multipart/form-data"
-                        method="POST"
-                        id = "upload">  -->
-                    <label>
-                        動画を選択
-                        <input id="finput" type="file" name="video">
-                    </label>
-                    
-                    <label>
-                        変換する
-                        <!-- <input type="submit" id="submit-button" value="送信"> -->
-                        <button id="submit-button" type="button" ></button>
-                    </label>
-                    <!-- </form> -->
-                </div>
+                <label>
+                    動画を選択
+                    <input id="finput" type="file" name="video">
+                </label>
+                
+                <label>
+                    変換する
+                    <button id="submit-button" type="button" ></button>
+                </label>
+            </div>
             <p id="foutput">選択されていません</p>
             <div id="mask" class="hidden">
             <div id="blank"></div>
@@ -47,9 +41,6 @@
                 <progress id="progress" class="hidden" value="0" max="100">0%</progress>
             </div>
             <pre id="file_text"></pre>
-            <!-- <section id="modal" class="hidden">
-                <p>変換中</p>
-            </section> -->
         </main>
         <script type='text/javascript' src="./js/script.js"></script>
     </body>
