@@ -18,33 +18,31 @@
         <meta name="google-site-verification" content="uQbqASjCW5cDatLTT_w7VvPhYIeTqBl8kbe6UDVBSNo" />
     </head>
     <body>
-        <div class="display-flex">
-            <header>
-                <img src="./images/soonawatchy_logo.png">
-                <h1>スナワッチー</h1>
-            </header>
-            <main>
-                <P>動画の内容をすぐに把握できます！<br>音声が入った動画をアップロードしてみましょう。</P>
-                <div>
-                    <label>
-                        動画(mp4)を選択
-                        <input id="finput" type="file" name="video">
-                    </label>
-                    
-                    <label>
-                        変換する
-                        <button id="submit-button" type="button" ></button>
-                    </label>
-                </div>
-                <p id="foutput">選択されていません</p>
-                <div id="mask" class="hidden">
-                <div id="blank"></div>
-                <div id="modal" class="hidden loader"></div>
-                    <progress id="progress" class="hidden" value="0" max="100">0%</progress>
-                </div>
-                <pre id="file_text"></pre>
-            </main>
-            <script type='text/javascript' src="./js/script.js"></script>
-        </div>
+        <header>
+            <img src="./images/soonawatchy_logo.png">
+            <h1>スナワッチー</h1>
+        </header>
+        <main>
+            <P>動画の内容をすぐに把握できます！<br>音声が入った動画をアップロードしてみましょう。</P>
+            <div>
+                <label>
+                    動画(mp4)を選択
+                    <input id="finput" type="file" name="video">
+                </label>
+                
+                <label>
+                    変換する
+                    <button id="submit-button" type="button" ></button>
+                </label>
+            </div>
+            <p id="foutput">選択されていません</p>
+            <div id="mask" class="hidden">
+            <div id="blank"></div>
+            <div id="modal" class="hidden loader"></div>
+                <progress id="progress" class="hidden" value="0" max="100">0%</progress>
+            </div>
+            <pre id="file_text"></pre>
+        </main>
+        <script type='text/javascript' src="./js/script.js"></script>
     </body>
 </html>

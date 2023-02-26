@@ -128,7 +128,7 @@ $(function () {
                 const subtopics = data_json.subtopics
                 const summary = data_json.summary
                 let output_html = ""
-                output_html += "<div id='output_json_text' class='display-flex'>"
+                output_html += "<div id='output_json_text'>"
                 output_html += "<h2>その動画、すなわち「" + topic + "」！！</h2>"
                 output_html += "<p>なお、話している人は" + speaker + "です。</p>"
                 output_html += "<h2>概要は以下のようになっています。</h2>"
