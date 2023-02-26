@@ -118,15 +118,15 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-    background-color: hsl(40, 100%, 24%);
+    background-color: hsl(40, 100%, 44%);
 }
   
 progress::-moz-progress-bar {
-    background-color: hsl(40, 100%, 24%);
+    background-color: hsl(40, 100%, 44%);
 }
   
 progress::-ms-fill {
-    background-color: hsl(40, 100%, 24%);
+    background-color: hsl(40, 100%, 44%);
 }
 
 .loader {
