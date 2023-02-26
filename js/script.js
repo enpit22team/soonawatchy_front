@@ -50,7 +50,7 @@ $(function () {
     // console.log(JSON.stringify($('input[name="video"]')));
     // console.log(JSON.stringify($upfile.files));
     let formData = new FormData();
-    console.log($upfile.prop('files')[0]);
+    // console.log($upfile.prop('files')[0]);
     var file = $('input')[0].files[0];
     if (file == undefined)
     {
@@ -79,10 +79,10 @@ $(function () {
     // var blob = file.slice(0, file.size, 'image/png'); 
     // file = new File([blob], name, {type: 'video'});
     formData.append("video", file);
-    console.log(formData);
-    for (var [key, value] of formData.entries()) { 
-      console.log(key, value);
-    }
+    // console.log(formData);
+    // for (var [key, value] of formData.entries()) { 
+    //   console.log(key, value);
+    // }
  
     // 処理前に Loading 画像を表示
     // dispLoading("処理中...");
