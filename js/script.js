@@ -121,8 +121,27 @@ $(function () {
                 //     $("#file_text").text(reader.result);
                 // });
                 let data_json = JSON.parse(data)
-                let output = JSON.stringify(data_json, null , "\t");
-                $("#file_text").text(output);
+                // let output = JSON.stringify(data_json, null , "\t");
+                // $("#file_text").text(output);
+                const topic = data_json.topic
+                const speaker = data_json.speaker
+                const subtopics = data_json.subtopics
+                const summary = data_json.summary
+                let output_html = ""
+                output_html += "<div>"
+                output_html += "<h2>話しているトピックは" + topic + "です。</h2>"
+                output_html += "<p>なお、話している人は" + speaker + "です。</p>"
+                output_html += "<h2>概要は以下のようになっています。</h2>"
+                output_html += "<p>" + summary + "</p>"
+                output_html += "<h2>ひとつひとつを具体的にした中身が以下です。</h2>"
+                for (const elem of subtopics) {
+                    const title = elem.title
+                    const content = elem.content
+                    output_html += "<h3>" + title + "について話しています。</h3>"
+                    output_html += "<p>具体的には、" + content + "について話しています。</p>"
+                }
+                output_html += "</div>"
+                $("body").append(output_html);
         
                 //Check the Browser type and download the File.
                 // var isIE = false || !!document.documentMode;
