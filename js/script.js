@@ -83,7 +83,6 @@ $(function () {
       type:"post",
       data: formData,
       processData: false,
-      contentType: false,
       cache: false,
       headers: {  
         'Content-Type': 'multipart/form-data'
