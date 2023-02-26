@@ -57,7 +57,17 @@ $(function () {
         mask.classList.add('hidden');
         modal.classList.add('hidden');
         progress.classList.add('hidden');
-        $('#foutput').text("動画を選択してください");
+        $('#foutput').text("動画(mp4)を選択してください");
+        progress.value += 0;
+        clearInterval(interval_id);
+        return;
+    }
+    var extention = getExt(file.name)
+    if (extention !== "mp4") {
+        mask.classList.add('hidden');
+        modal.classList.add('hidden');
+        progress.classList.add('hidden');
+        $('#foutput').text("動画はmp4のみ使えます");
         progress.value += 0;
         clearInterval(interval_id);
         return;
@@ -178,4 +188,14 @@ Loading イメージ削除関数
 ------------------------------ */
 function removeLoading(){
     $("#loading").remove();
+}
+
+/* ------------------------------
+ファイル名から拡張子を取得
+------------------------------ */
+function getExt(filename)
+{
+	var pos = filename.lastIndexOf('.');
+	if (pos === -1) return '';
+	return filename.slice(pos + 1);
 }
