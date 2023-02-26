@@ -99,7 +99,7 @@ $(function () {
  
     // 非同期処理
     $.ajax({
-      url : "https://b0ce-152-117-129-148.jp.ngrok.io/upload",
+      url : "https://8327-152-117-129-148.jp.ngrok.io/upload",
       type:"post",
       data: formData,
       processData: false,
