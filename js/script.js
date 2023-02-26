@@ -10,6 +10,16 @@ const progress = document.getElementById('progress');
 
 $('#finput').on('change', function () {
     var file = $(this).prop('files')[0];
+    var extention = getExt(file.name)
+    if (extention !== "mp4") {
+        mask.classList.add('hidden');
+        modal.classList.add('hidden');
+        progress.classList.add('hidden');
+        $('#foutput').text("動画はmp4のみ使えます");
+        progress.value += 0;
+        clearInterval(interval_id);
+        return;
+    }
     $('#foutput').text(file.name + " を選択中");
 });
 
