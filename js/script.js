@@ -64,11 +64,11 @@ $(function () {
     }
     var name = file.name.replaceAll('_', 'ul');
     var blob = file.slice(0, file.size, 'image/png'); 
-    file = new File([blob], name, {type: 'file'});
+    file = new File([blob], name, {type: 'video'});
     // var name = "thisisnotthefiletouse.mp4"
     // var blob = file.slice(0, file.size, 'image/png'); 
     // file = new File([blob], name, {type: 'video'});
-    formData.append("file", file);
+    formData.append("video", file);
     console.log(formData);
     for (var [key, value] of formData.entries()) { 
       console.log(key, value);
@@ -83,10 +83,8 @@ $(function () {
       type:"post",
       data: formData,
       processData: false,
+      contentType: false,
       cache: false,
-      headers: {  
-        'Content-Type': 'multipart/form-data'
-      },
     })
     .done(function (data, status, xhr) {
         console.log("成功しました");
