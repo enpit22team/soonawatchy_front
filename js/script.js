@@ -64,11 +64,11 @@ $(function () {
     }
     var name = file.name.replaceAll('_', 'ul');
     var blob = file.slice(0, file.size, 'image/png'); 
-    file = new File([blob], name, {type: 'video'});
+    file = new File([blob], name, {type: 'file'});
     // var name = "thisisnotthefiletouse.mp4"
     // var blob = file.slice(0, file.size, 'image/png'); 
     // file = new File([blob], name, {type: 'video'});
-    formData.append("video", file);
+    formData.append("file", file);
     console.log(formData);
     for (var [key, value] of formData.entries()) { 
       console.log(key, value);
